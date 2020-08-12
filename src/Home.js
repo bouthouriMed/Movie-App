@@ -31,7 +31,7 @@ class Home extends Component {
       search : search
     })
     let data =this.state.movies.filter((movie) => {
-      return movie.title.includes(search) && movie.rating === rate}
+      return movie.title.toLowerCase().includes(search.toLowerCase()) && movie.rating >= rate }
     )
 
     //  this.setState({
