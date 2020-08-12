@@ -1,4 +1,5 @@
 import React from 'react'
+import Stars from './Stars'
 
 function MovieCard({movie}) {
 
@@ -13,6 +14,12 @@ return (
     <div className="card-content">
         <p>{movie.content}</p>
     </div>
+
+    <Stars value={movie.rating} /> 
+
+    
+   
+ 
 </div>
     )
 
