@@ -14,7 +14,7 @@ return (
     <div className="card-content">
         <p>{movie.content}</p>
     </div>
-
+    {console.log(movie.rating)}
     <Stars value={movie.rating} /> 
 
     

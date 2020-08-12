@@ -48,11 +48,12 @@ console.log(data,search,rate)
 
   handleAdd = (imageSrc,title,description,rating) => {
     const newMovie = {imageSrc:imageSrc,title:title,content:description,id:Math.random(),rating:rating}
-    const moviesA = [...this.state.movies,newMovie]
+    console.log("newmovie",newMovie)
+    const moviesA = [...this.state.currentMovies,newMovie]
     this.setState({
-      movies:moviesA
+      currentMovies:moviesA
+      
     })
-    
   }
 
   render() {

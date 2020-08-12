@@ -21,7 +21,7 @@ function AddMovie({handleAdd}){
     const [imageSrc,setImageSrc] = React.useState('');
     const [title,setTitle] = React.useState('');
     const [description,setDesciprtion] = React.useState('');
-    const [rating,setRating] = React.useState('');
+    const [rating,setRating] = React.useState(0);
     
   
   
@@ -61,7 +61,7 @@ function AddMovie({handleAdd}){
             <input placeholder="Add movie name"  onChange={(e)=> setTitle(e.target.value)}/>
             <input placeholder="add movie image (ex: moviePic/spiderman.jpg)" onChange={(e)=> setImageSrc(e.target.value)}/>
             <input placeholder="Add movie description" onChange={(e)=> setDesciprtion(e.target.value)}/>
-            <input placeholder="Add movie rating" onChange={(e)=> setRating(e.target.value)}/>
+            <input placeholder="Add movie rating" onChange={(e)=> setRating(Number(e.target.value))}/>
             <div >
             <button className="add-submitt"  style={{backgroundColor:'rgb(97, 189, 94)'}} onClick={handleSubmit} >Add</button>
             <button className="close-button"  style={{backgroundColor:'orange'}} onClick={closeModal}>close</button>

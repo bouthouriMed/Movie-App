@@ -1,9 +1,9 @@
-import React , {useState}from 'react';
+import React from 'react';
 import MovieCard from './MovieCard';
 
 
 
-function MovieList({movies,search,currentMovies}) {
+function MovieList({currentMovies}) {
 
 
     const movieList = currentMovies.map( movie => {
