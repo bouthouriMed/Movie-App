@@ -37,7 +37,7 @@ class Home extends Component {
     //  this.setState({
     //      currentMovies : data
     //    })
-console.log(data,search)
+console.log(data,search,rate)
      data.length  ? ( this.setState({
       currentMovies : data
     })) : ( this.setState({
