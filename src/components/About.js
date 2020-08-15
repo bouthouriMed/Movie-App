@@ -1,10 +1,11 @@
 import React from 'react'
 
-function About({match}) {
-    console.log(match)
+function About() {
+ 
     return (
         <div>
             <h1>what about us</h1>
+
         </div>
     )
 }

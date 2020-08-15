@@ -8,7 +8,7 @@ function Nav() {
             
             {/* <a href="#" className="brand-logo">Logo</a> */}
             <ul className="menue">
-                <Link to="/">
+                <Link to="/home">
                     <li> <img className="logo" src={logo} alt="logo" /> </li>
                 </Link>
                 <Link to="/about">

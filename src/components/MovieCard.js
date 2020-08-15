@@ -1,5 +1,4 @@
 import React from 'react'
-import Stars from './Stars'
 
 function MovieCard({movie}) {
 
@@ -7,19 +6,14 @@ return (
 
 <div>
     <div className="card-image">
-    <img src={movie.imageSrc} alt=""/>
-    <span className="card-title">{movie.title}</span>
-    <a className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons"> ❤  </i></a>
+    <img src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2/${movie.poster_path}`} alt=""/>
+    <span className="btn-floating halfway-fab waves-effect waves-light red"></span>
     </div>
     <div className="card-content">
-        <p>{movie.content}</p>
+        <span className="card-title">{movie.title}</span>
+        <p>{movie.overview.slice(0,100)+"..."}</p>
     </div>
-    {console.log(movie.rating)}
-    <Stars value={movie.rating} /> 
 
-    
-   
- 
 </div>
     )
 

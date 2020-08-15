@@ -1,6 +1,11 @@
 import React from 'react'
 
-function Community() {
+function Community(props) {
+
+    setTimeout(() => {
+       props.history.push('/login')
+    }, 2000);
+
     return (
         <div>
            <h1>my community</h1> 

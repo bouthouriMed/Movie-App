@@ -1,23 +1,25 @@
-import React, { Component } from 'react'
+import React, { useState,useEffect } from 'react'
 
-class Login extends Component {
+function Login () {
 
-    state= {
-        isLogin :  false ,
+    const [isLogin,setIsLogin] = useState(false)
+
+    const handleLogin = () => {
+        setIsLogin(!isLogin)
     }
 
-    handleLogin = () => {
-        this.setState(prevState => ({isLogin:true}))
-        let newIsLogin = localStorage.getItem('isLogin') 
-        
-    }
+    useEffect(() => {
+      
+        console.log(isLogin)
 
-    componentWillUpdate(nextProps, nextState) {
-        localStorage.setItem('isLogin',this.state.isLogin)
-        
-    }
+    }, [isLogin])
+
+
+
+  
     
-    render() {
+    
+     
         return (
             
                 <div>
@@ -29,12 +31,15 @@ class Login extends Component {
                         <input id="password" type="password" className="validate"/>
                         <label htmlFor="password">Password</label>
                     </div>
-                    <button onClick={this.handleLogin} className="btn waves-effect waves-light" >{this.state.isLogin ? ("LogIn") : ("LogOut")}
+                    <button onClick={handleLogin} className="btn waves-effect waves-light" >{isLogin ? ("LogOut") : ("LogIn")}
                     </button>
+                  
                 </div>
-            
+
         )
-    }
+            
+        
+    
 }
 
 export default Login
